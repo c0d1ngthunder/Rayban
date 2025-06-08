@@ -1,9 +1,22 @@
+@font-face {
+    font-family: gilroy;
+    src: url("./assets/Gilroy-Regular.ttf");
+}
+
+@font-face {
+    font-family: kajiro;
+    src: url("./assets/Kajiro\ Bold.ttf");
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: gilroy;
 }
-html , body {
+
+html,
+body {
     width: 100%;
     height: 100%;
 }
@@ -11,27 +24,113 @@ html , body {
 main {
     width: 100%;
     height: 100vh;
-    background-color: black;
+    color: white;
     position: relative;
 }
 
-#back{
+#back {
     width: 100%;
     height: 100vh;
 }
 
-#top{
+#top {
     width: 100%;
     height: 100vh;
     position: absolute;
     top: 0;
-    left: 0;    
+    left: 0;
+    pointer-events: none;
 }
 
-#text{
-    width: 80%;
+#text {
+    width: 90%;
     height: 100vh;
     max-width: 1920px;
     margin: 0 auto;
-    border: 1px solid white;
+    position: relative;
+}
+
+nav {
+    width: 100%;
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+#nleft img {
+    height: 50px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    pointer-events: all;
+}
+
+#nleft,
+#nright {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+#hero {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.elem{
+    height: 8.2vw;
+    overflow: hidden;
+}
+
+.elem h1{
+    font-family: kajiro;
+    font-size: 10vw;
+    font-weight: 200;
+}
+#hero-right p:nth-child(4){
+    margin-bottom: 0;
+}
+
+#hero-right {
+    width: 30%;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+#hero-right p{
+    text-align: right;
+    margin-bottom: 40px;
+}
+.imgdiv{
+    width: 80%;
+    height: 180px;
+    background-color: #fff;
+    margin-bottom: 50px;
+    background-image: url("https://images.unsplash.com/photo-1527203561188-dae1bc1a417f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzR8fHBvcnRyYWl0fGVufDB8fDB8fHww");
+    background-size: cover;
+    background-position: center;
+}
+
+#hero-left{
+    width: 50%;
+    margin: auto 0;
+}
+#hero-left button{
+    margin-top: 2vw;
+    padding: 8px 24px;
+    font-size: 3vw;
+    font-family: kajiro;
+    pointer-events: all;
+}
+
+#back img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
