@@ -86,13 +86,21 @@ nav a {
 .elem{
     height: 10.2vw;
     overflow: hidden;
+    position: relative;
 }
 
 .elem h1{
     font-family: kajiro;
     font-size: 12vw;
     font-weight: 200;
+    position: absolute;
+    top: 100%;
 }
+
+.elem h1:nth-child(1){
+    top: 0;
+}
+
 #hero-right p:nth-child(4){
     margin-bottom: 0;
 }
